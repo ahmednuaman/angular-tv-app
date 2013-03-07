@@ -4,7 +4,11 @@
   </p>
   <ul>
     <li data-ng-repeat="link in links">
-      <a href="#" id="link-{{$index}}" data-focus-directive="{{$first}}">
+      <a href="#" id="home-link-{{$index}}" data-focus-directive="{{$first}}"
+        data-key-up="dynamic: leaveUp"
+        data-key-down="dynamic: leaveDown"
+        data-key-left=""
+        data-key-right="">
         {{$first}}
         I can haz link: {{$index}}
       </a>
