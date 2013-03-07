@@ -4,8 +4,7 @@ A simple TV app (with spatial navigation) built on AngularJS.
 ## Dependancies
 - AngularJS
 - RequireJS
-- Normalize.scss
 
-Install with Bower: `bower install angular requirejs normalize.scss`
+Install with Bower: `bower install angular requirejs`
 
 Compile by running: `coffee -c -m app; sass -g app.scss app.css`
