@@ -3,10 +3,8 @@
     Path: {{location}}
   </p>
   <ul>
-    <li><a href="#">I can haz link</a></li>
-    <li><a href="#">I can haz link</a></li>
-    <li><a href="#">I can haz link</a></li>
-    <li><a href="#">I can haz link</a></li>
-    <li><a href="#">I can haz link</a></li>
+    <li data-ng-repeat="link in links">
+      <a href="#">I can haz link: {{$index}}</a>
+    </li>
   </ul>
 </div>

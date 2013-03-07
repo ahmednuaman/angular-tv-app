@@ -9,6 +9,7 @@ define [
       @addLocationToView()
 
     addLocationToView: () ->
+      @$scope.links = [0...10]
       @$scope.location = @$location.path()
 
   app = A.module cfg.ngApp
