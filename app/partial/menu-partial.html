@@ -4,8 +4,10 @@
       <a data-ng-href="{{item.link}}" id="menu-link-{{$index}}"
         data-key-up="dynamic: leaveDown"
         data-key-down="dynamic: leaveUp"
-        data-key-left=""
-        data-key-right="">
+        data-key-left="#menu-link-{{itemsKeyLeft[$index]}}"
+        data-key-right="#menu-link-{{itemsKeyRight[$index]}}">
+        Left: {{itemsKeyLeft[$index]}} <br>
+        Right: {{itemsKeyRight[$index]}} <br>
         {{item.title}}
       </a>
     </li>

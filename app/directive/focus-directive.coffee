@@ -5,9 +5,9 @@ define [
   FocusDirective = () ->
 
     link: ($scope, $element, $attrs) ->
-      $attrs.$observe 'focusDirective', (first) ->
+      $attrs.$observe 'focus', (first) ->
         if first is 'true'
           $element[0].focus()
 
   app = A.module cfg.ngApp
-  app.directive 'focusDirective', FocusDirective
+  app.directive 'focus', FocusDirective

@@ -18,7 +18,10 @@ define [
       .then success, failure
 
     handleMenuItemsSuccess: (items) ->
+      keys = [0...items.length] # just so we can haz an array of indexes
       @$scope.items = items
+      @$scope.itemsKeyLeft = keys.slice(-1).concat(keys.slice(0)) # forgive me
+      @$scope.itemsKeyRight = keys.slice(1).concat(keys.slice(0)) # forgive me
 
     handleMenuItemsFailure: () ->
       console.log 'Error'

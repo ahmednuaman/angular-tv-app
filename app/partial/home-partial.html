@@ -4,12 +4,13 @@
   </p>
   <ul>
     <li data-ng-repeat="link in links">
-      <a href="#" id="home-link-{{$index}}" data-focus-directive="{{$first}}"
+      <a href="#" id="home-link-{{$index}}" data-focus="{{$first}}"
         data-key-up="dynamic: leaveUp"
         data-key-down="dynamic: leaveDown"
-        data-key-left=""
-        data-key-right="">
-        {{$first}}
+        data-key-left="#home-link-{{linksKeyLeft[$index]}}"
+        data-key-right="#home-link-{{linksKeyRight[$index]}}">
+        Left: {{linksKeysLeft[$index]}} <br>
+        Right: {{linksKeysRight[$index]}} <br>
         I can haz link: {{$index}}
       </a>
     </li>
