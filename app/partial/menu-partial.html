@@ -1,7 +1,9 @@
 <div id="menu-partial">
   <ul>
     <li data-ng-repeat="item in items">
-      <a data-ng-href="{{item.link}}">
+      <a data-ng-href="{{item.link}}" id="menu-link-{{$index}}"
+        data-key-up="dynamic: leaveUp"
+        data-key-down="dynamic: leaveUp">
         {{item.title}}
       </a>
     </li>

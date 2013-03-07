@@ -4,7 +4,10 @@
   </p>
   <ul>
     <li data-ng-repeat="link in links">
-      <a href="#">I can haz link: {{$index}}</a>
+      <a href="#" id="link-{{$index}}" data-focus-directive="{{$first}}">
+        {{$first}}
+        I can haz link: {{$index}}
+      </a>
     </li>
   </ul>
 </div>
