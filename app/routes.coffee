@@ -2,6 +2,7 @@ define [
   'config'
   'angular'
   'directive/focus-directive'
+  'directive/key-handler-directive'
   'factory/menu-factory'
   'service/menu-service'
   'controller/app-controller'
