@@ -1,13 +1,13 @@
 define [
   'config'
   'angular'
-  'directive/focus-directive'
-  'directive/key-handler-directive'
   'factory/menu-factory'
   'service/menu-service'
   'controller/app-controller'
   'controller/home-controller'
   'controller/menu-controller'
+  'directive/focus-directive'
+  'directive/key-handler-directive'
 ], (cfg, A) ->
   routes = ($routeProvider) ->
     $routeProvider.when '/home',
