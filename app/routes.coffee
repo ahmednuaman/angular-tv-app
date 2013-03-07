@@ -4,6 +4,7 @@ define [
   'directive/focus-directive'
   'factory/menu-factory'
   'service/menu-service'
+  'controller/app-controller'
   'controller/home-controller'
   'controller/menu-controller'
 ], (cfg, A) ->
