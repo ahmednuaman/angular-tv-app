@@ -8,8 +8,6 @@
 
       HomeController.$inject = ['$scope', '$location'];
 
-      HomeController.$name = 'HomeController';
-
       function HomeController($scope, $location) {
         this.$scope = $scope;
         this.$location = $location;
@@ -24,8 +22,7 @@
 
     })();
     app = A.module(cfg.ngApp);
-    app.controller(HomeController.$name, HomeController);
-    return HomeController;
+    return app.controller('HomeController', HomeController);
   });
 
 }).call(this);

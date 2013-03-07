@@ -1,22 +1,14 @@
 define [
   'config'
   'angular'
-  # 'directive/section-carousel'
-  # 'directive/section-carousel-item'
-  # 'directive/selected-menu-link'
-  # 'factory/carousel-factory'
-  # 'factory/menu-factory'
-  # 'factory/keys-factory'
-  # 'service/carousel-service'
-  # 'service/menu-service'
-  # 'controller/menu-controller'
   'controller/home-controller'
-  # 'controller/subsection-controller'
-  # 'controller/section-controller'
-], (cfg, A, HomeController) ->
+  'controller/menu-controller'
+  'factory/menu-factory'
+  'service/menu-service'
+], (cfg, A) ->
   routes = ($routeProvider) ->
     $routeProvider.when '/home',
-      controller: HomeController.$name
+      controller: 'HomeController'
       templateUrl: cfg.path.partial + 'home-partial.html'
 
     $routeProvider.otherwise

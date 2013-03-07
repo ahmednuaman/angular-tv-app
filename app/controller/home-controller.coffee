@@ -4,7 +4,6 @@ define [
 ], (cfg, A) ->
   class HomeController
     @$inject = ['$scope', '$location']
-    @$name = 'HomeController'
 
     constructor: (@$scope, @$location) ->
       @addLocationToView()
@@ -13,6 +12,4 @@ define [
       @$scope.location = @$location.path()
 
   app = A.module cfg.ngApp
-  app.controller HomeController.$name, HomeController
-
-  HomeController
+  app.controller 'HomeController', HomeController

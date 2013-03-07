@@ -1,0 +1,20 @@
+{
+  "menu": [
+    {
+      "title": "Grumpy cat 1",
+      "link": "http://google.com/?s=grumpy+cat+1"
+    },
+    {
+      "title": "Grumpy cat 2",
+      "link": "google.com/?s=grumpy+cat+2"
+    },
+    {
+      "title": "Grumpy cat 3",
+      "link": "http://google.com/?s=grumpy+cat+3"
+    },
+    {
+      "title": "Grumpy cat 4",
+      "link": "http://google.com/?s=grumpy+cat+4"
+    }
+  ]
+}
