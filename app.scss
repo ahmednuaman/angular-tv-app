@@ -1,0 +1,22 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    display: inline;
+
+    a {
+      display: block;
+      float: left;
+      padding: 5px;
+    }
+  }
+}
