@@ -5,6 +5,10 @@ html {
   background: #ffffff;
 }
 
+a:focus {
+  background: red;
+}
+
 ul {
   margin: 0;
   padding: 0;
