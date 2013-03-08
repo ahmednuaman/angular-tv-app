@@ -1,6 +1,7 @@
 require.config
   urlArgs: 'x=' +  (new Date()).getTime()
-  waitSeconds: 1000
+  waitSeconds: 30
+  scriptType: 'text/javascript;version=1.8'
   shim:
     angular:
       exports: 'angular'
