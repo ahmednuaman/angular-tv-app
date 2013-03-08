@@ -10,19 +10,20 @@
     <body data-ng-controller="AppController">
       <div id="menu-partial" class="focus-parent" data-index="0" data-ng-controller="MenuController" data-ng-include="template"></div>
       <div id="main-partial" class="focus-parent" data-index="1" data-ng-view></div>
-        <script src="components/jquery/jquery.js"></script>
-        <script src="components/angular/angular.js"></script>
-        <script>
-          var config = {
-            ngApp: 'tv-app',
-            path: {
-              app: 'app/',
-              partial: 'app/partial/'
-            }
-          };
-          var app = angular.module(config.ngApp, []);
+      <script>window.JSON || document.write('<script src="components/json2/json2.js"><\/script>')</script>
+      <script src="components/jquery/jquery.js"></script>
+      <script src="components/angular/angular.js"></script>
+      <script>
+        var config = {
+          ngApp: 'tv-app',
+          path: {
+            app: 'app/',
+            partial: 'app/partial/'
+          }
+        };
+        var app = angular.module(config.ngApp, []);
 
-          $.getScript(config.path.app + 'bootstrap.js');
-        </script>
+        $.getScript(config.path.app + 'bootstrap.js');
+      </script>
     </body>
 </html>
