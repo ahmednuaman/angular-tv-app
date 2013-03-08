@@ -1,4 +1,6 @@
 require.config
+  urlArgs: 'x=' +  (new Date()).getTime()
+  waitSeconds: 1000
   shim:
     angular:
       exports: 'angular'
