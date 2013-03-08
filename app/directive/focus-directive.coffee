@@ -2,12 +2,17 @@ define [
   'config'
   'angular'
 ], (cfg, A) ->
-  FocusDirective = () ->
+  FocusDirective = ($timeout) ->
 
     link: ($scope, $element, $attrs) ->
+      applyFocus = () ->
+        $element[0].focus()
+
       $attrs.$observe 'focus', (first) ->
         if first is 'true'
-          $element[0].focus()
+          $timeout applyFocus, 100
+
+  FocusDirective.$inject = ['$timeout']
 
   app = A.module cfg.ngApp
   app.directive 'focus', FocusDirective
