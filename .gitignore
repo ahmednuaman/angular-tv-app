@@ -1,4 +1,6 @@
+.project
 .sass-cache
+.settings
 components
 *.css
 *.js

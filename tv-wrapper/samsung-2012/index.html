@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title></title>
+			<script src="$MANAGER_WIDGET/Common/af/2.0.0/loader.js"></script>
+      <script src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+      <style>
+        html,
+        body {
+          background: #ffffff;
+        }
+      </style>
+	</head>
+  <body onload="init()">
+    <script>
+      var widgetAPI = new Common.API.Widget();
+
+      function init () {
+        widgetAPI.sendReadyEvent();
+
+        window.location = 'http://192.168.1.101/angular-tv-app/?x=' + (new Date()).getTime();
+      }
+    </script>
+	</body>
+</html>
