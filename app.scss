@@ -12,6 +12,9 @@ a:focus {
 ul {
   margin: 0;
   padding: 0;
+  display: block;
+  position: relative;
+  height: 100px;
 
   li {
     list-style: none;
