@@ -1,26 +1,21 @@
-define [
-  'config'
-  'angular'
-  'factory/menu-factory'
-  'service/menu-service'
-  'controller/app-controller'
-  'controller/home-controller'
-  'controller/menu-controller'
-  'directive/focus-directive'
-  'directive/key-handler-directive'
-], (cfg, A) ->
-  routes = ($routeProvider) ->
-    $routeProvider.when '/home',
-      controller: 'HomeController'
-      templateUrl: cfg.path.partial + 'home-partial.html'
+class Routes
 
-    $routeProvider.otherwise
-      redirectTo: '/home'
+  constructor: () ->
 
-  routes.$inject = ['$routeProvider']
-  routes.$eager = true
+    routes = ($routeProvider) ->
+      $routeProvider.when '/home',
+        controller: 'HomeController'
+        templateUrl: config.path.partial + 'home-partial.html'
 
-  app = A.module cfg.ngApp
-  app.config routes
+      $routeProvider.otherwise
+        redirectTo: '/home'
 
-  A.bootstrap document, [cfg.ngApp]
+    routes.$inject = ['$routeProvider']
+    routes.$eager = true
+
+    app.config routes
+
+    angular.bootstrap document, [config.ngApp]
+
+$(document).ready () ->
+  new Routes()
