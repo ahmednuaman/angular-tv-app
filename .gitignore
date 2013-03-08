@@ -2,6 +2,7 @@
 .sass-cache
 .settings
 components
+$$*
 *.css
 *.js
 *.map
