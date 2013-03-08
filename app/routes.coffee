@@ -2,15 +2,17 @@ class Routes
 
   constructor: () ->
 
-    routes = ($routeProvider) ->
-      $routeProvider.when '/home',
+    routes = ($routeProvider, $locationProvider) ->
+      $locationProvider.html5Mode false
+
+      $routeProvider.when '/',
         controller: 'HomeController'
         templateUrl: config.path.partial + 'home-partial.html'
 
       $routeProvider.otherwise
-        redirectTo: '/home'
+        redirectTo: '/'
 
-    routes.$inject = ['$routeProvider']
+    routes.$inject = ['$routeProvider', '$locationProvider']
     routes.$eager = true
 
     app.config routes
