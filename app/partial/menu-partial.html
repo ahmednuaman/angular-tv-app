@@ -1,16 +1,16 @@
-<div id="menu-partial" class="focus-parent">
-  <ul>
-    <li data-ng-repeat="item in items">
-      <a data-ng-href="{{item.link}}" id="menu-link-{{$index}}"
-        data-key-up="dynamic: leaveDown#menu-partial"
-        data-key-down="dynamic: leaveUp#menu-partial"
-        data-key-left="#menu-link-{{itemsKeyLeft[$index]}}"
-        data-key-right="#menu-link-{{itemsKeyRight[$index]}}"
-        data-key-handler>
-        Left: {{itemsKeyLeft[$index]}} <br>
-        Right: {{itemsKeyRight[$index]}} <br>
-        {{item.title}}
-      </a>
-    </li>
-  </ul>
-</div>
+<ul>
+  <li data-ng-repeat="item in items">
+    <a data-ng-href="{{item.link}}"
+      id="menu-link-{{$index}}"
+      data-key-up="dynamic: leaveUp#menu-partial"
+      data-key-down="dynamic: leaveDown#menu-partial"
+      data-key-left="#menu-link-{{itemsKeyLeft[$index]}}"
+      data-key-right="#menu-link-{{itemsKeyRight[$index]}}"
+      data-index="{{$index}}"
+      data-key-handler>
+      Left: {{itemsKeyLeft[$index]}} <br>
+      Right: {{itemsKeyRight[$index]}} <br>
+      {{item.title}}
+    </a>
+  </li>
+</ul>
