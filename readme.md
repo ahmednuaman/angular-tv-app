@@ -5,6 +5,6 @@ A simple TV app (with spatial navigation) built on AngularJS.
 - AngularJS
 - RequireJS
 
-Install with Bower: `bower install angular requirejs`
+Install with Bower: `bower install angular requirejs sizzle`
 
 Compile by running: `coffee -c -m app; sass -g app.scss app.css`

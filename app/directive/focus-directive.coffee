@@ -1,5 +1,5 @@
 define [
-  'config',
+  'config'
   'angular'
 ], (cfg, A) ->
   FocusDirective = () ->
